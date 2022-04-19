@@ -6,5 +6,6 @@ public class Employee {
         System.out.println("111");
 
         System.out.println("hot-fix branch");
+        System.out.println("master test");
     }
 }
