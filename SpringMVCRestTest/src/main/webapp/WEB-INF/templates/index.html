@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+<a th:href="@{/employee}">hello world</a><br>
+<a th:href="@{/responseServlet}">responseServlet</a><br>
+<a th:href="@{/responseBody}">responseBody</a><br>
+<a th:href="@{/responseEmployee}">responseEmployee</a><br>
+<form th:action="@{/requestBody}" method="post">
+   id: <input type="text" name="id"/>
+    password:<input type="text" name="password">
+    <input type="submit" value="注册"><br>
+</form>
+
+
+<form th:action="@{/requestEntity}" method="post">
+    id: <input type="text" name="id"/>
+    password:<input type="text" name="password">
+    <input type="submit" value="注册">
+
+</form>
+
+<a th:href="@{/fileDownload}">测试文件下载</a>
+
+<form  th:action="@{/testUpFile}" method="post" enctype="multipart/form-data">
+    头像：<input type="file" name="photo"><br>
+    <input  type="submit" value="上传">
+</form>
+
+<a th:href="@{/testInterceptor}">测试拦截</a><br>
+
+<a th:href="@{/testException}">测试自定义异常错误处理</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<a th:href="@{/target}" >点击跳转到世界级代码</a>
+<a th:href="@{/target1/1/admit}">rest方式获取参数</a><br>
+
+<a  th:href="@{/a/ss/sss/target2}">ant风格路径</a><br>
+<a th:href="@{/ada/target3}">?任意匹配一个字符测试  </a><br>
+<a th:href="@{/azdfsdfa/target4}">*任意匹配一个或多个字符测试  </a><br>
+<a th:href="@{/target5(id=12,password='admit')}"> 测试获取请求参数  </a>
+
+
+<form th:action="@{/target6}" METHOD="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="text" name="password"><br>
+
+    性别：<input type="radio" name="sex" value="男">男
+         <input  type="radio" name="sex" value="女">女<br>
+    邮箱：<input type="text"  name="email"><br>
+
+    年龄：<input type="text "  name="age"><br>
+    <input type="submit" value="提交">
+</form>
+
+<a th:href="@{/target7}" >modelAndView 测试链接</a><br>
+
+<a th:href="@{/target8}" >model 测试链接</a><br>
+<a th:href="@{/target9}" >map 测试链接</a><br>
+<a th:href="@{/target10}" >modelMap 测试链接</a><br>
+<a th:href="@{/target11}" >servletApi 测试链接</a><br>
+<a th:href="@{/target12}" >sessionScope 测试链接</a><br>
+<a th:href="@{/target13}" >applictionContext 测试链接</a><br>
+
+<a th:href="@{/target14}">forward 测试链接</a><br>
+<a th:href="@{/target15}"> redirect 测试链接</a><br>
+</body>
+</html>
